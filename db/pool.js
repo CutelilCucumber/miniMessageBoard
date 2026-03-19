@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
-const envVars = require('../env.js');
+require('dotenv').config();
 
 module.exports = new Pool({
-  connectionString: envVars.conString
+  connectionString: process.env.SUPA_CONSTRING
 });
